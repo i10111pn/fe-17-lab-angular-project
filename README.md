@@ -16,7 +16,7 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
   pages/components: friends
 
-  issues: 
+  issues: [#6](https://github.com/i10111pn/fe-17-lab-angular-project/issues/6)
 
 * [Yevhen Motrych](https://github.com/i10111pn): 
 
