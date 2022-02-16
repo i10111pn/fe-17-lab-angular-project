@@ -6,19 +6,19 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
 ## Tasks
 
-* Vitalii Murmylo:
+* [Vitalii Murmylo](https://github.com/VitaliiMurmylo):
 
   pages/components: games, library
 
   issues: 
 
-* Vladyslav Bekerskyi:
+* [Vladyslav Bekerskyi](https://github.com/bekerskyi):
 
   pages/components: friends
 
   issues: 
 
-* Yevhen Motrych: 
+* [Yevhen Motrych](https://github.com/i10111pn): 
 
   pages/components: login, header
 
@@ -28,14 +28,14 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
 ## Initial Setup
 
-* check if `node` has 16.x.x version:
+* check if node has 16.x.x version:
 
   `node -v`
-* check if `npm` has 8.x.x version:
+* check if npm has 8.x.x version:
 
   `npm -v`
 
-* check if `angular cli` has 13.x.x version:
+* check if angular-cli has 13.x.x version:
 
   `ng --version`
 
