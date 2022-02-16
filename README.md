@@ -10,7 +10,7 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
   pages/components: games, library
 
-  issues: 
+  issues: [#7](https://github.com/i10111pn/fe-17-lab-angular-project/issues/7)
 
 * [Vladyslav Bekerskyi](https://github.com/bekerskyi):
 
