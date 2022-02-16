@@ -103,6 +103,10 @@ If code work is done:
 
 * close Related GitHub issue
 
+* switch to main branch
+
+  `git checkout main`
+
 ## Git Commit Message Convention
 
 ```
@@ -134,3 +138,14 @@ For examples:
 `git commit -m "ci: deploy application to Heroku`
 
 `git commit -m "feat: add login form validation"`
+
+## Heroku Deployment Test
+
+  To test locally if deployment will be sucesufull run:
+
+  ```
+    ng build
+    node server.js
+  ```
+
+  Visit [localhost:8080](http://localhost:8080/) in the browser.
