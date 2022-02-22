@@ -9,7 +9,7 @@ import { USERS } from '../friends/friends.component';
   styleUrls: ['./friend.component.scss']
 })
 export class FriendComponent implements OnInit{
-  @Input() user!: USERS;
+  @Input()user!: USERS;
   @Input() users: any;
   @Input() myFriend:any;
   @Input() search=''

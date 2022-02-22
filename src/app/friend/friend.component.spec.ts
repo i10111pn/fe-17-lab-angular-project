@@ -8,15 +8,21 @@ describe('FriendComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FriendComponent ]
+      declarations: [FriendComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(FriendComponent);
     component = fixture.componentInstance;
+    component.user = {
+      id: 1,
+      first_name: 'String',
+      isFriend: false
+    }
     fixture.detectChanges();
+
   });
 
   it('should create', () => {
