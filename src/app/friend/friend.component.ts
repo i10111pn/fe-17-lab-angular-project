@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { USERS } from '../friends/friends.component';
 
 
@@ -8,7 +8,7 @@ import { USERS } from '../friends/friends.component';
   templateUrl: './friend.component.html',
   styleUrls: ['./friend.component.scss']
 })
-export class FriendComponent implements OnInit{
+export class FriendComponent {
   @Input()user!: USERS;
   @Input() users: any;
   @Input() myFriend:any;
@@ -19,9 +19,7 @@ export class FriendComponent implements OnInit{
 
   constructor() { }
 
-  ngOnInit(): void {
 
-  }
 
   add(){
     this.user.isFriend=true
