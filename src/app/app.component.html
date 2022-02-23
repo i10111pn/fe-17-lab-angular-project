@@ -1,5 +1,17 @@
-<h3>{{ title }}</h3>
-<app-games></app-games>
-<app-friends></app-friends>
-<app-games></app-games>
-<app-library></app-library>
+<button mat-button routerLink="games">
+  <span>Games</span>
+</button>
+
+<br>
+
+<button mat-button routerLink="library">
+  <span>Library</span>
+</button>
+
+<br>
+
+<button mat-button routerLink="friends">
+  <span>Friends</span>
+</button>
+
+<router-outlet></router-outlet>
