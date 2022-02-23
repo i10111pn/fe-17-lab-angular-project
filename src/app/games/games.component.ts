@@ -43,16 +43,22 @@ export class GamesComponent implements OnInit {
   ngOnInit() {
     this.games = this.createGames();
 
-    for(let i = 0; i < 3;) {
-      let randomIndex = Math.floor(Math.random() * this.games.length);
-      let randomGameInLibrary = this.games[randomIndex];
+    if(this.service.myGames.length === 0){
 
-      if(!this.service.myGames.includes(randomGameInLibrary)) {
+      for(let i = 0; i < 3;) {
+        let randomIndex = Math.floor(Math.random() * this.games.length);
+        let randomGameInLibrary = this.games[randomIndex];
+        
+        if(!this.service.myGames.includes(randomGameInLibrary)) {
         this.service.myGames.push(randomGameInLibrary)
         this.games[randomIndex].isInLibrary = true;
         i++;
+        }
+
       }
+      
     }
+
   }
 
   addToLibrary(game: Game) {
