@@ -11,14 +11,16 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
   pages/components: games, library
 
   issues:
-  [#7](https://github.com/i10111pn/fe-17-lab-angular-project/issues/7)
+  [#7](https://github.com/i10111pn/fe-17-lab-angular-project/issues/7),
   [#10](https://github.com/i10111pn/fe-17-lab-angular-project/issues/10)
 
 * [Vladyslav Bekerskyi](https://github.com/bekerskyi):
 
   pages/components: friends
 
-  issues: [#6](https://github.com/i10111pn/fe-17-lab-angular-project/issues/6)
+  issues: 
+  [#6](https://github.com/i10111pn/fe-17-lab-angular-project/issues/6),
+  [#11](https://github.com/i10111pn/fe-17-lab-angular-project/issues/11)
 
 * [Yevhen Motrych](https://github.com/i10111pn): 
 
@@ -26,42 +28,26 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
   issues: 
   [#2](https://github.com/i10111pn/fe-17-lab-angular-project/issues/2),
-  [#3](https://github.com/i10111pn/fe-17-lab-angular-project/issues/3) 
+  [#3](https://github.com/i10111pn/fe-17-lab-angular-project/issues/3),
+  [#14](https://github.com/i10111pn/fe-17-lab-angular-project/issues/14)  
 
 ## Initial Setup
 
-* check if node has 16.x.x version:
-
-  `node -v`
-* check if npm has 8.x.x version:
-
-  `npm -v`
-
-* check if angular-cli has 13.x.x version:
-
-  `ng --version`
-
-* clone project: 
-
-  `git clone https://github.com/i10111pn/fe-17-lab-angular-project.git`
-
-* install dependencies:
-
-  `npm install`
-
-* run project:
-
-  `ng serve -o`
+* check if node has 16.x.x version: `node -v`
+* check if npm has 8.x.x version: `npm -v`
+* check if angular-cli has 13.x.x version: `ng --version`
+* clone project: `git clone https://github.com/i10111pn/fe-17-lab-angular-project.git`
+* install dependencies: `npm install`
+* run project: `ng serve -o`
 
 ## Workflow
 
-* pull latest changes
+### Initial steps:
+* pull latest changes: `git pull`
 
-  `git pull`
+* create an issue at [GitHub](https://github.com/i10111pn/fe-17-lab-angular-project/issues), in the name describe what part of the work is going to be implemented
 
-* create an issue at [GitHub](https://github.com/i10111pn/fe-17-lab-angular-project/issues). In the name describe what part of the work is going to be implemented.
-
-* create git branch with the same name as GitHub issue.
+* create git branch with the same name as GitHub issue:
 
   `git checkout -b <branch name here>`
 
@@ -69,45 +55,34 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
 * add link of GitHub issue to README.md (Tasks section)
 
-* add your code changes and commit them to the git (by one or many commits)
- 
-  `git add -A`
+### Code changes:
 
-  `git commit -m "<commit message here>"`
+* add your code changes and commit them to the git
+ 
+  ```
+    git add -A
+    git commit -m "<commit message here>"
+  ```
 
   see "Git Commit Message Convention" for the message format
 
-If code work is done:
+### Code changes are done:
 
-* pull latest changes
+* pull latest changes: `git pull origin main`
+* check if tests are not failing: `ng test`
+* check if the linter is not failing: `ng lint`
 
-  `git pull origin main`
-
-* check if tests are not failing
-  
-  `ng test`
-
-* check if the linter is not failing
-  
-  `ng lint`
-
-* push changes to GitHub
+* push changes to GitHub:
 
   `git push origin <branch name here>`
 
   for example: `git push origin add-documentation`
 
 * create a pull request on GitHub and add reviewers
-
 * merge pull request after two approvals
-
 * check if changes are deployed to Heroku
-
-* close Related GitHub issue
-
-* switch to main branch
-
-  `git checkout main`
+* link pull request to related GitHub issue and to close it
+* switch to main branch: `git checkout main`
 
 ## Git Commit Message Convention
 
@@ -133,13 +108,13 @@ The type must be one of the following:
 * **test**: adding missing tests or correcting existing tests
 * **typo**: typo fixes
 
-For examples:
+Examples:
 
-`git commit -m "general: initial commit"`
-
-`git commit -m "ci: deploy application to Heroku`
-
-`git commit -m "feat: add login form validation"`
+```
+git commit -m "general: initial commit"
+git commit -m "ci: deploy application to Heroku
+git commit -m "feat: add login form validation"
+```
 
 ## Heroku Deployment Test
 
