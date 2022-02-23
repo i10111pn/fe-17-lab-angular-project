@@ -1,23 +1,22 @@
 <div class="container">
+  
   <div class="friends-header">
     <h3 class="friends-title">Friends</h3>
-
     <div class='search-form'>
       <label class="input-label" for="friend">Search Friends</label>
       <input class="input-search" type="text" name="friend" id="friend" placeholder="Search friends"
         [(ngModel)]='search' #inputSearch (keyup.enter)='onClick(search)' (input)="onInput($event) ">
       <button class="search-btn" (click)='onClick(search)'>Search</button>
     </div>
-
   </div>
 
   <div *ngIf="search" class="friends-search">
     <h2 class="friends_header">Search Friend: {{search}}</h2>
-    <div *ngIf='!arr.length&&btnToggle' class="search-error">
+    <div *ngIf='!arr.length&&noUsers' class="search-error">
       <Small>There is no such users:{{search}}</Small>
     </div>
-    <div *ngIf='btnToggle' class="search-component">
-      <app-friend *ngFor="let user of arr" [user]='user' [search]="search" [btnToggle]='btnToggle' [users]='Users'
+    <div *ngIf='toggle' class="search-component">
+      <app-friend *ngFor="let user of arr" [user]='user' [search]="search" [toggle]='toggle' [users]='Users'
         [myFriend]='myFriend'></app-friend>
     </div>
   </div>
@@ -25,7 +24,7 @@
   <div *ngIf="!search" class="friends-search">
     <h2 class="friends_header">My Friends: </h2>
     <h3 class="no_friends" *ngIf='myFriend.length===0'>You have no friends yet.</h3>
-    <app-friend *ngFor="let user of myFriend" [user]='user' [search]="search" [btnToggle]='btnToggle' [users]='Users'
+    <app-friend *ngFor="let user of myFriend" [user]='user' [search]="search" [toggle]='toggle' [users]='Users'
       [myFriend]='myFriend'></app-friend>
   </div>
 

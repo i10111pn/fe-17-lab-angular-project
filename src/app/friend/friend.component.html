@@ -1,11 +1,11 @@
-<div *ngIf='!btnToggle' class="friend ">
+<div *ngIf='!toggle' class="friend ">
   <span>{{user.first_name}}</span>
-  <button *ngIf='!user.isFriend;' (click)='add()'>Add</button>
-  <button *ngIf='user.isFriend;' (click)='remove()'>Remove</button>
+  <button class="add-btn" *ngIf='!user.isFriend;' (click)='add()'>Add Friend</button>
+  <button class="remove-btn" *ngIf='user.isFriend;' (click)='remove()'>Remove Friend</button>
 </div>
 
-<div *ngIf='btnToggle' class="friend ">
+<div *ngIf='toggle' class="friend ">
   <span>{{user.first_name}}</span>
-  <button *ngIf='!user.isFriend;' (click)='add()'>Add</button>
-  <button *ngIf='user.isFriend;'  (click)='remove()'>Remove</button>
+  <button class="add-btn" *ngIf='!user.isFriend;' (click)='add()'>Add Friend</button>
+  <button class="remove-btn" *ngIf='user.isFriend;'  (click)='remove()'>Remove Friend</button>
 </div>
