@@ -2,7 +2,6 @@ import { Component, Input} from '@angular/core';
 import { USERS } from '../friends/friends.component';
 
 
-
 @Component({
   selector: 'app-friend',
   templateUrl: './friend.component.html',
@@ -13,13 +12,9 @@ export class FriendComponent {
   @Input() users: any;
   @Input() myFriend:any;
   @Input() search=''
-  @Input() btnToggle!:boolean
-
-
+  @Input() toggle!:boolean
 
   constructor() { }
-
-
 
   add(){
     this.user.isFriend=true

@@ -1,6 +1,5 @@
 import { AfterContentChecked, Component, OnInit } from '@angular/core';
-// import UsersJson from '../users.json';
-import UsersJson from '../users2.json';
+import UsersJson from 'src/users.json';
 
 
 export interface USERS {
@@ -19,54 +18,43 @@ export class FriendsComponent implements OnInit, AfterContentChecked {
   arr: any = []
   myFriend: any = []
   search = ''
-  btnToggle = false
+  toggle = false
+  noUsers = false
 
-  constructor() {
-  }
-  ngAfterContentChecked():void{
-
+  constructor() {}
+  
+  ngAfterContentChecked(): void {
     this.getdata();
-    
   }
+
   ngOnInit() {
     this.update();
-    this.getdata();
-  }
-   update() {
-     if(localStorage.getItem('allUsers')){
-      this.Users = JSON.parse(localStorage.getItem('allUsers') || '{}');
-      // console.log(this.Users);
-      
-      let all = JSON.parse(localStorage.getItem('allUsers') || '{}');
-      this.myFriend = all.filter((user: { isFriend: boolean; }) => user.isFriend === true)
-     }else{
-       localStorage.setItem('allUsers', JSON.stringify(this.Users))
-       this.Users = JSON.parse(localStorage.getItem('allUsers') || '{}');
-     }
   }
 
-  getdata(){
+  update() {
+    if (localStorage.getItem('allUsers')) {
+      this.Users = JSON.parse(localStorage.getItem('allUsers') || '{}');
+    } else {
+      localStorage.setItem('allUsers', JSON.stringify(this.Users))
+      this.Users = JSON.parse(localStorage.getItem('allUsers') || '{}');
+    }
+  }
+
+  getdata() {
     localStorage.setItem('allUsers', JSON.stringify(this.Users))
     this.myFriend = this.Users.filter(user => user.isFriend === true)
   }
 
   onClick(value: string) {
-      this.btnToggle = true
-      this.arr = this.Users.filter(user => user.first_name.toLowerCase().includes(value.toLowerCase()))
-      console.log(this.arr);
-      
+    this.noUsers = true
+    this.toggle = true
+    this.arr = this.Users.filter(user => user.first_name.toLowerCase().includes(value.toLowerCase()))
   }
-  
+
   onInput(event: any) {
-    
+    this.noUsers = false
     if (!this.search.trim()) {
-      console.log(this.Users);
-      this.btnToggle = false
-      this.myFriend = this.Users.filter(user => user.isFriend === true)
-      // this.myFriend = JSON.parse(localStorage.getItem('storedUsers') || '{}');
-      // localStorage.setItem('storedUsers', JSON.stringify(this.myFriend));
-      console.log(this.Users);
-      
+      this.toggle = false
     }
   }
 }
