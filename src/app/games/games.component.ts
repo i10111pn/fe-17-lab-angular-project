@@ -32,7 +32,7 @@ export class GamesComponent implements OnInit {
   
   createGames() {
     let games = [];
-    for(let i = 1; i <=50; i++){
+    for(let i = 1; i <=20; i++){
       games.push(this.service.createGame(i));
     }
     return games;

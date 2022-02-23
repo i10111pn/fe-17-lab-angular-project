@@ -25,9 +25,11 @@
                     <p>{{ game.description }}</p>
                 </div>
                 <div class="add-to-library-button">
-                    <button  (click)="addToLibrary(game)" 
-                    [disabled]="game.isInLibrary" 
-                    [ngStyle]="{backgroundColor: game.isInLibrary ? '#9c9c9c' : '6C69FF'}">Add to Library</button>
+                    <button *ngIf="!game.isInLibrary" 
+                    (click)="addToLibrary(game)"  
+                    [ngStyle]="{backgroundColor: '#6C69FF'}">Add to Library</button>
+                    <button *ngIf="game.isInLibrary" disabled
+                    [ngStyle]="{backgroundColor: '#9c9c9c'}">Already in Library</button>
                 </div>
             </div>
         </div>
