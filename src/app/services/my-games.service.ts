@@ -1,4 +1,4 @@
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Game } from '../games/games.component';
 
 @Injectable({
@@ -15,6 +15,16 @@ export class MyGamesService {
     let isInLibrary = false;
     return new Game(title, price, description, genre, isInLibrary);
   }
+
+  createGames() {
+    let games = [];
+    for(let i = 1; i <=20; i++){
+      games.push(this.createGame(i));
+    }
+    return games;
+  }
+
+  games: Game[] = [];
 
   myGames: Game[] = [];
 
