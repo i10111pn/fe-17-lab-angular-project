@@ -29,19 +29,16 @@ export class GamesComponent implements OnInit {
   constructor(private service: MyGamesService) {
 
   }
-  
-  createGames() {
-    let games = [];
-    for(let i = 1; i <=20; i++){
-      games.push(this.service.createGame(i));
-    }
-    return games;
-  }
 
   games: Game[] = [];
 
   ngOnInit() {
-    this.games = this.createGames();
+
+    if(this.service.games.length === 0) {
+      this.service.games = this.service.createGames();
+    }
+    
+    this.games = this.service.games;
 
     if(this.service.myGames.length === 0){
 

@@ -13,7 +13,8 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
   issues:
   [#7](https://github.com/i10111pn/fe-17-lab-angular-project/issues/7),
   [#10](https://github.com/i10111pn/fe-17-lab-angular-project/issues/10),
-  [#19](https://github.com/i10111pn/fe-17-lab-angular-project/issues/19)
+  [#19](https://github.com/i10111pn/fe-17-lab-angular-project/issues/19),
+  [#21](https://github.com/i10111pn/fe-17-lab-angular-project/issues/21)
 
 * [Vladyslav Bekerskyi](https://github.com/bekerskyi):
 
