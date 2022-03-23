@@ -10,16 +10,17 @@
 .search-form {
   .input-label {
     display: block;
+    height: 28px;
+    font-weight: bold;
     margin-top: 10px;
   }
 
   .input-search {
-    width: 1000px;
-    padding: 8px 5px;
-    border: 0.5px solid #000000;
-    box-sizing: border-box;
+    width: calc(100% - 100px);
+    height: 32px;
+    padding: 10px;
     border-radius: 4px;
-    font-size: 14px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
   .search-btn {
@@ -45,15 +46,14 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 1200px;
-  height: 700px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  padding: 20px 0 0 60px;
-  overflow: auto;
+    flex-direction: column;
+    padding: 20px 60px;
+    
+    min-height: calc(100% - 120px);
+    margin: 64px 80px 0 ;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
 
   .friends_header {
     font-weight: 400;
@@ -62,6 +62,15 @@
 
   .no_friends {
     font-weight: 400;
+
+  }
+  .friends_wrapper{
+    height:500px;
+    overflow:auto;
+  }
+  .search-component{
+    height:500px;
+    overflow: auto;
 
   }
 }
