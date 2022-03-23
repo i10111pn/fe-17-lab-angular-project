@@ -24,8 +24,10 @@
   <div *ngIf="!search" class="friends-search">
     <h2 class="friends_header">My Friends: </h2>
     <h3 class="no_friends" *ngIf='myFriend.length===0'>You have no friends yet.</h3>
-    <app-friend *ngFor="let user of myFriend" [user]='user' [search]="search" [toggle]='toggle' [users]='Users'
+    <div class="friends_wrapper">
+      <app-friend *ngFor="let user of myFriend" [user]='user' [search]="search" [toggle]='toggle' [users]='Users'
       [myFriend]='myFriend'></app-friend>
+    </div>
   </div>
 
 </div>
