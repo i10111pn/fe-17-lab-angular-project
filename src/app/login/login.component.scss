@@ -1,0 +1,22 @@
+.app-login {
+  .mat-card {
+    padding: 10px 30px;
+  }
+
+  .mat-card-title {
+    padding: 20px;
+  }
+
+  .form {
+    width: 400px;
+
+    .mat-form-field {
+      display: block;
+    }
+
+    .login-button {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+}

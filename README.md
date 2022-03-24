@@ -18,7 +18,7 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
 
 * [Vladyslav Bekerskyi](https://github.com/bekerskyi):
 
-  pages/components: friends
+  pages/components: friends, header
 
   issues: 
   [#6](https://github.com/i10111pn/fe-17-lab-angular-project/issues/6),
@@ -34,7 +34,8 @@ Demo: [fe-17-lab-angular-project.herokuapp.com](https://fe-17-lab-angular-projec
   issues: 
   [#2](https://github.com/i10111pn/fe-17-lab-angular-project/issues/2),
   [#3](https://github.com/i10111pn/fe-17-lab-angular-project/issues/3),
-  [#14](https://github.com/i10111pn/fe-17-lab-angular-project/issues/14)  
+  [#14](https://github.com/i10111pn/fe-17-lab-angular-project/issues/14),
+  [#24](https://github.com/i10111pn/fe-17-lab-angular-project/issues/24)    
 
 ## Initial Setup
 
