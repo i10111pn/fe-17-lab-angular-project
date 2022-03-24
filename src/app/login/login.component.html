@@ -1,0 +1,35 @@
+<section class="app-login">
+  <mat-card fxLayout="column">
+    <mat-progress-bar mode="indeterminate" value="40" *ngIf="isProcessing">
+    </mat-progress-bar>
+
+    <mat-card-title fxFlexAlign="center">Login</mat-card-title>
+
+    <mat-card-content>
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()"
+            fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Username" formControlName="username" required>
+
+          <mat-error>Please provide a username</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password"
+                 formControlName="password" required>
+
+          <mat-error>Please provide a valid password</mat-error>
+        </mat-form-field>
+
+        <button class="login-button" mat-raised-button color="primary" fxFlexAlign="end">
+          Login
+        </button>
+
+        <mat-error *ngIf="submitted && loginForm.invalid || loginError">
+          <div>Invalid username or password</div>
+          <div>login and password - flastname</div>
+        </mat-error>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>
